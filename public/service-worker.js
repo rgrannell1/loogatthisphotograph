@@ -2,11 +2,12 @@
 const cached = [
   '/',
   '/css/style.css',
-  '/manifest.webmanifest'
+  '/manifest.webmanifest',
+  '/audio/nickelback-fickletrap.mp3'
 ]
 
 const install = async () => {
-  const cache = await caches.open('sw-cache')
+  const cache = await caches.open('sw-cache-v2')
   await cache.addAll(cached)
   return self.skipWaiting()
 }
